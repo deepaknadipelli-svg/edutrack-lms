@@ -12,9 +12,7 @@ export default function Dashboard() {
 
   const studentName = user?.name;
 
-  // =========================
   // STUDENT SUMMARY
-  // =========================
 
   const [studentSummary, setStudentSummary] =
     useState({
@@ -27,9 +25,8 @@ export default function Dashboard() {
 
     });
 
-  // =========================
+
   // ADMIN SUMMARY
-  // =========================
 
   const [adminSummary, setAdminSummary] =
     useState({
@@ -58,24 +55,23 @@ export default function Dashboard() {
 
   }, []);
 
-  // ===================================
+
   // STUDENT DASHBOARD
-  // ===================================
 
   const fetchStudentDashboard = async () => {
 
     try {
 
       const coursesRes = await axios.get(
-        'http://localhost:5000/api/courses'
+        'https://edutrack-lms-w3bg.onrender.com/api/courses'
       );
 
       const enrollmentsRes = await axios.get(
-        `http://localhost:5000/api/enrollments/${studentName}`
+        `https://edutrack-lms-w3bg.onrender.com/api/enrollments/${studentName}`
       );
 
       const progressRes = await axios.get(
-        `http://localhost:5000/api/progress/${studentName}`
+        `https://edutrack-lms-w3bg.onrender.com/api/progress/${studentName}`
       );
 
       const completed =
@@ -104,16 +100,15 @@ export default function Dashboard() {
 
   };
 
-  // ===================================
   // ADMIN DASHBOARD
-  // ===================================
+
 
   const fetchAdminDashboard = async () => {
 
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/dashboard/summary'
+        'https://edutrack-lms-w3bg.onrender.com/api/dashboard/summary'
       );
 
       setAdminSummary(res.data);
@@ -126,9 +121,7 @@ export default function Dashboard() {
 
   };
 
-  // ===================================
   // ADMIN UI
-  // ===================================
 
   if (role === 'admin') {
 
@@ -258,9 +251,7 @@ export default function Dashboard() {
 
   }
 
-  // ===================================
   // STUDENT UI
-  // ===================================
 
   return (
 

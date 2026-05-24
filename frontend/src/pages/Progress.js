@@ -25,7 +25,7 @@ export default function Progress() {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/progress/${studentName}`
+        `https://edutrack-lms-w3bg.onrender.com/api/progress/${studentName}`
       );
 
       const uniqueCourses = [];

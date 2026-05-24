@@ -18,7 +18,7 @@ export default function AdminEnrollments() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/admin/enrollments'
+        'https://edutrack-lms-w3bg.onrender.com/api/admin/enrollments'
       );
 
       setEnrollments(res.data);

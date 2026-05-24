@@ -37,16 +37,15 @@ export default function InstructorDashboard() {
 
   }, []);
 
-  // ==========================
+ 
   // FETCH COURSES
-  // ==========================
 
   const fetchCourses = async () => {
 
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/courses'
+        'https://edutrack-lms-w3bg.onrender.com/api/courses'
       );
 
       const instructorCourses =
@@ -65,9 +64,7 @@ export default function InstructorDashboard() {
 
   };
 
-  // ==========================
   // CREATE COURSE
-  // ==========================
 
   const createCourse = async () => {
 
@@ -86,7 +83,7 @@ export default function InstructorDashboard() {
     try {
 
       await axios.post(
-        'http://localhost:5000/api/courses',
+        'https://edutrack-lms-w3bg.onrender.com/api/courses',
         {
 
           title,
@@ -118,9 +115,8 @@ export default function InstructorDashboard() {
 
   };
 
-  // ==========================
+  
   // CREATE ASSIGNMENT
-  // ==========================
 
   const createAssignment = async () => {
 
@@ -140,7 +136,7 @@ export default function InstructorDashboard() {
     try {
 
       await axios.post(
-        'http://localhost:5000/api/assignments',
+        'https://edutrack-lms-w3bg.onrender.com/api/assignments',
         {
 
           courseId,

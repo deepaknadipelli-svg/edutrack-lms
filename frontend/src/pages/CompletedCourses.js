@@ -18,7 +18,7 @@ export default function CompletedCourses() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/admin/completed-courses'
+        'https://edutrack-lms-w3bg.onrender.com/api/admin/completed-courses'
       );
 
       setCompleted(res.data);

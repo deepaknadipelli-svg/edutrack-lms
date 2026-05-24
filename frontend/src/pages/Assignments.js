@@ -20,7 +20,7 @@ export default function Assignments() {
         // GET ENROLLED COURSES
 
         const enrollmentsRes = await axios.get(
-          `http://localhost:5000/api/enrollments/${studentName}`
+          `https://edutrack-lms-w3bg.onrender.com/api/enrollments/${studentName}`
         );
 
         const enrolledCourses = enrollmentsRes.data;
@@ -28,7 +28,7 @@ export default function Assignments() {
         // GET STUDENT ASSIGNMENTS
 
         const assignmentsRes = await axios.get(
-          `http://localhost:5000/api/student-assignments/${studentName}`
+          `https://edutrack-lms-w3bg.onrender.com/api/student-assignments/${studentName}`
         );
 
         // FILTER ASSIGNMENTS ONLY FOR ENROLLED COURSES
@@ -57,9 +57,8 @@ export default function Assignments() {
 
   }, [studentName]);
 
-  // ==========================
+
   // SUBMIT ASSIGNMENT
-  // ==========================
 
   const submitAssignment = async (
     assignmentId
@@ -100,7 +99,7 @@ export default function Assignments() {
     try {
 
       await axios.post(
-        'http://localhost:5000/api/submissions',
+        'https://edutrack-lms-w3bg.onrender.com/api/submissions',
         formData
       );
 

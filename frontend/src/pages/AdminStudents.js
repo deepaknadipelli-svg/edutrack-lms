@@ -18,7 +18,7 @@ export default function AdminStudents() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/admin/students'
+        'https://edutrack-lms-w3bg.onrender.com/api/admin/students'
       );
 
       setStudents(res.data);

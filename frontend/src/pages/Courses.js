@@ -8,7 +8,7 @@ export default function Courses() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/courses')
+      .get('https://edutrack-lms-w3bg.onrender.com/api/courses')
       .then((res) => setCourses(res.data));
   }, []);
 
@@ -24,7 +24,7 @@ export default function Courses() {
     try {
   
       const response = await axios.post(
-        'http://localhost:5000/api/enrollments',
+        'https://edutrack-lms-w3bg.onrender.com/api/enrollments',
         {
           studentName: user.name,
           courseId: id

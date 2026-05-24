@@ -20,7 +20,7 @@ export default function Submissions() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/submissions'
+        'https://edutrack-lms-w3bg.onrender.com/api/submissions'
       );
 
       setSubmissions(res.data);
@@ -38,7 +38,7 @@ export default function Submissions() {
     try {
 
       await axios.put(
-        `http://localhost:5000/api/submissions/${id}/review`,
+        `https://edutrack-lms-w3bg.onrender.com/api/submissions/${id}/review`,
         {
           marks: marks[id],
           feedback: feedback[id],
@@ -116,7 +116,7 @@ export default function Submissions() {
             {sub.fileUrl && (
 
               <a
-                href={`http://localhost:5000/uploads/${sub.fileUrl}`}
+                href={`https://edutrack-lms-w3bg.onrender.com/uploads/${sub.fileUrl}`}
                 target="_blank"
                 rel="noreferrer"
                 style={{

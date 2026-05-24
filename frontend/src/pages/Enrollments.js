@@ -12,7 +12,7 @@ function Enrollments() {
     if (user) {
 
       axios
-        .get(`http://localhost:5000/api/enrollments/${user.name}`)
+        .get(`https://edutrack-lms-w3bg.onrender.com/api/enrollments/${user.name}`)
         .then((res) => {
           setCourses(res.data);
         })

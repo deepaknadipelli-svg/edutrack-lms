@@ -27,7 +27,7 @@ export default function AdminDashboard() {
     try {
 
       const res = await axios.get(
-        'http://localhost:5000/api/dashboard/summary'
+        'https://edutrack-lms-w3bg.onrender.com/api/dashboard/summary'
       );
 
       setSummary(res.data);
